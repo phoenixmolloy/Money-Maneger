@@ -1,0 +1,52 @@
+(Psuedocode)
+BEGIN MoneyManeger
+
+    Print "Choose app: "
+    Print "1 - MoneyBuckets"
+    Print "2 - CompoundInterest"
+
+    #User enters 1 or 2 for which app they choose
+    Get a choice
+
+    WHILE CHOICE != ""
+
+        IF choice == 1 THEN
+           MoneyBuckets()
+        ELSEIF choice == 2 THEN
+            CompoundInterest()
+        ELSEIF choice == Go back
+
+    ENDWHILE
+
+END MoneyManeger
+
+
+
+
+BEGIN MoneyBuckets()
+
+Ask user for an Income amount
+
+Print Blow = Income * 0.6
+Print DailyExpenses = Blow * 0.6
+Print Splurge = Blow * 0.1
+Print Smile = Blow * 0.1
+Print FireExinguisher = Blow * 0.2
+Print Grow = Income * 0.2
+Print Mojo = Income * 0.2
+
+END MoneyBuckets()
+
+
+BEGIN CompoundInterest()
+
+Ask user to input their start age when they begin investing
+Ask user for average annual return #(e.g 10%)
+Ask user for amount they will invest every year
+
+WHILE age <= 60
+    Print savings = (savings + investing amount) * (annual return + 100%)
+    age += 1
+ENDWHILE
+
+END CompoundInterest()
