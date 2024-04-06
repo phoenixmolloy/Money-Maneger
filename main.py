@@ -17,33 +17,46 @@ def money_buckets():
     return
 
 def compound_interest():
+    savings = 0
     age = int(input("What age did you start investing? "))
     rate = int(input("What is the average annual return? "))
     investingamount = int(input("Amount you invest every year: "))
 
+    print("Age      Rate     Savings")
     while age <= 60:
-        print(savings + )
+        savings = savings + investingamount + (savings + investingamount) * (rate/100)
+        print(f"{age}       {rate}%      ${round(savings, 2)}")
+        age += 1
+    return
 
-# Ask user to input their start age when they begin investing
-# Ask user for average annual return #(e.g 10%)
-# Ask user for amount they will invest every year
-#
-# WHILE age <= 60
-#     Print savings = (savings + investing amount) * (annual return + 100%)
-#     age += 1
-# ENDWHILE
+print("***********************************************")
+print("$                Money Maneger                $")
+print("***********************************************")
 
-print("Choose app")
+
+print("Choose Feature")
 print("1 - MoneyBuckets")
 print("2 - CompoundInterest")
-choice = input()
+choice = input("Feature: ")
+
+def choose():
+    print("Another Feature?")
+    print("1 - MoneyBuckets")
+    print("2 - CompoundInterest")
+    print("3 - Finish")
+    choice = input("Feature: ")
+    return
 
 while choice != "":
     if choice == "1":
         money_buckets()
+        choose()
     elif choice == "2":
         compound_interest()
+        choose()
+    elif choice == "3":
+        choice = ""
     else:
-        print("hi")
-    #elif choice == "go back":
-choice = input("w")
+        print("Invalid - Try again")
+        choice = input("App: ")
+print("Thank you for using Money Manger.")
