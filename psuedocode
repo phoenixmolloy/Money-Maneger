@@ -13,12 +13,15 @@ BEGIN MoneyManeger
 
         IF choice == 1 THEN
            MoneyBuckets()
+           Get choice
         ELSEIF choice == 2 THEN
             CompoundInterest()
+            Get choice
         ELSEIF choice == 3
             CHOICE = ""
         ELSE
             PRINT "Invalid"
+            Get choice
 
     ENDWHILE
 
@@ -31,13 +34,13 @@ BEGIN MoneyBuckets()
 
     Ask user for an Income amount
 
-    Print Blow = Income * 0.6
+    Print Blow = Income Amount * 0.6
     Print DailyExpenses = Blow * 0.6
     Print Splurge = Blow * 0.1
     Print Smile = Blow * 0.1
     Print FireExinguisher = Blow * 0.2
-    Print Grow = Income * 0.2
-    Print Mojo = Income * 0.2
+    Print Grow = Income Amount * 0.2
+    Print Mojo = Income Amount * 0.2
 
 END MoneyBuckets()
 
